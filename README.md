@@ -47,3 +47,9 @@ So, at the end of the day, you will end up with the following folder structure:
 ## Leave your mark 👉👈🥺
 
 Buy me ~~a coffee~~ an alcohol-free cider [here](http://buymeacoffee.com/jonathunky)
+
+
+
+```
+python3 u2net_train.py -i DUTS-TR/DUTS-TR-Image -m DUTS-TR/DUTS-TR-Mask
+```

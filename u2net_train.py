@@ -321,6 +321,8 @@ def load_dataset(img_dir, lbl_dir, ext):
     """
     img_list = glob.glob(os.path.join(img_dir, "*" + ext))
     lbl_list = [os.path.join(lbl_dir, os.path.basename(img)) for img in img_list]
+    print(f"img_list length: {len(img_list)}")
+    print(f"lbl_list length: {len(lbl_list)}")
 
     return img_list, lbl_list
 
@@ -496,9 +498,11 @@ def main():
     if not os.path.exists("saved_models"):
         os.makedirs("saved_models")
 
-    tra_img_name_list, tra_lbl_name_list = load_dataset(
-        tra_image_dir, tra_label_dir, ".png"
-    )
+    # tra_img_name_list, tra_lbl_name_list = load_dataset(
+    #     tra_image_dir, tra_label_dir, ".png"
+    # )
+    tra_img_name_list = glob.glob(os.path.join(tra_image_dir, "*" + 'jpg'))
+    tra_lbl_name_list = glob.glob(os.path.join(tra_label_dir, "*" + 'png'))
 
     print(f"Images: {format(len(tra_img_name_list))}, masks: {len(tra_lbl_name_list)}")
 
